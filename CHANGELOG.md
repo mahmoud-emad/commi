@@ -5,6 +5,15 @@ All notable changes to Commi will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.1] - 2026-11-24
+
+### Security
+
+- Upgraded `reqwest` to 0.12, moving to `rustls` 0.23 and `rustls-webpki` 0.103 (fixes a CRL parsing denial of service and several other TLS advisories)
+- Upgraded `git2` to 0.20.4
+- Updated `bytes` and `slab` to patched versions
+- Gemini API key is now sent in the `x-goog-api-key` header instead of the URL query string
+
 ## [4.0.0] - 2025-07-24
 
 ### Major Release - Modern CLI Redesign
