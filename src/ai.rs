@@ -356,8 +356,8 @@ impl GeminiClient {
         };
 
         let url = format!(
-            "https://generativelanguage.googleapis.com/v1beta/models/{}:generateContent?key={}",
-            self.model_name, self.api_key
+            "https://generativelanguage.googleapis.com/v1beta/models/{}:generateContent",
+            self.model_name
         );
 
         // Apply rate limiting
@@ -366,6 +366,7 @@ impl GeminiClient {
         let response = self
             .client
             .post(&url)
+            .header("x-goog-api-key", &self.api_key)
             .json(&request)
             .send()
             .await
@@ -472,8 +473,8 @@ impl GeminiClient {
         };
 
         let url = format!(
-            "https://generativelanguage.googleapis.com/v1beta/models/{}:generateContent?key={}",
-            self.model_name, self.api_key
+            "https://generativelanguage.googleapis.com/v1beta/models/{}:generateContent",
+            self.model_name
         );
 
         // Apply rate limiting
@@ -482,6 +483,7 @@ impl GeminiClient {
         let response = self
             .client
             .post(&url)
+            .header("x-goog-api-key", &self.api_key)
             .json(&request)
             .send()
             .await
@@ -570,8 +572,8 @@ impl GeminiClient {
         };
 
         let url = format!(
-            "https://generativelanguage.googleapis.com/v1beta/models/{}:generateContent?key={}",
-            self.model_name, self.api_key
+            "https://generativelanguage.googleapis.com/v1beta/models/{}:generateContent",
+            self.model_name
         );
 
         // Apply rate limiting
@@ -580,6 +582,7 @@ impl GeminiClient {
         let response = self
             .client
             .post(&url)
+            .header("x-goog-api-key", &self.api_key)
             .json(&request)
             .send()
             .await
@@ -726,8 +729,8 @@ impl GeminiClient {
         };
 
         let url = format!(
-            "https://generativelanguage.googleapis.com/v1beta/models/{}:generateContent?key={}",
-            self.model_name, self.api_key
+            "https://generativelanguage.googleapis.com/v1beta/models/{}:generateContent",
+            self.model_name
         );
 
         // Apply rate limiting
@@ -736,6 +739,7 @@ impl GeminiClient {
         let response = self
             .client
             .post(&url)
+            .header("x-goog-api-key", &self.api_key)
             .json(&request)
             .send()
             .await
