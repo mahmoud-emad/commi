@@ -1,6 +1,7 @@
 name: Security
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * 0'  # Weekly on Sunday
   push:
